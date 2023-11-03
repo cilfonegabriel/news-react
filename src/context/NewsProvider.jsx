@@ -27,7 +27,8 @@ const NewsProvider = ({children}) => {
         <NewsContext.Provider
             value={{
                 category,
-                handleChangeCategory
+                handleChangeCategory,
+                news
             }}
         >
             {children}
