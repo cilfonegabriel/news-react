@@ -10,7 +10,7 @@ const NewsProvider = ({children}) => {
 
     useEffect(() => {
         const checkApi =async () => {
-            const url = `https://newsapi.org/v2/top-headlines?country=ar&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`
+            const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`
 
             const { data } = await axios(url)
 

@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, Select, MenuItem, Button, Box } from "@mui/material"
+import { FormControl, InputLabel, Select, MenuItem } from "@mui/material"
 import useNews from "../hooks/useNews"
 
 const CATEGORIES = [
@@ -33,18 +33,6 @@ const Form = () => {
                 ))}
 
             </Select>
-
-            <Box sx={{marginTop: 2}}>
-                <Button
-                    fullWidth
-                    variant = "contained"
-                    color="primary"
-                >
-                    Search News
-                </Button>
-            </Box>
-
-
         </FormControl>
     </form>
   )
