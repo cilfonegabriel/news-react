@@ -8,7 +8,13 @@ import Grid from "@mui/material/Grid"
 
 const News = ({noticia}) => {
 
+    console.log(noticia)
+
     const { urlToImage, url, title, description, source } = noticia
+
+    if (description === null || urlToImage === null) {
+        return null; // Si alguno es null, no renderizar la noticia
+    }
     
     return (
         <Grid item md={6} lg={4}>
