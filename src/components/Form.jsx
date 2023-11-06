@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, Select, MenuItem, Button, Box } from "@mui/material"
+import { FormControl, InputLabel, Select, MenuItem } from "@mui/material"
 import useNews from "../hooks/useNews"
 
 const CATEGORIES = [
@@ -14,40 +14,29 @@ const CATEGORIES = [
 const Form = () => {
 
     const { category, handleChangeCategory } = useNews()
-  return (
-    <form action="">
-        <FormControl fullWidth>
-            <InputLabel>Category</InputLabel>
-            <Select
-                label = "Category"
-                onChange={handleChangeCategory}
-                value={category}
-            >
-                {CATEGORIES.map(category => (
-                    <MenuItem
-                        key={category.value}
-                        value={category.value}
-                    >
-                        {category.label}
-                    </MenuItem>
-                ))}
-
-            </Select>
-
-            <Box sx={{marginTop: 2}}>
-                <Button
-                    fullWidth
-                    variant = "contained"
-                    color="primary"
+    
+    return (
+        <form action="">
+            <FormControl fullWidth>
+                <InputLabel>Category</InputLabel>
+                <Select
+                    label = "Category"
+                    onChange={handleChangeCategory}
+                    value={category}
                 >
-                    Search News
-                </Button>
-            </Box>
+                    {CATEGORIES.map(category => (
+                        <MenuItem
+                            key={category.value}
+                            value={category.value}
+                        >
+                            {category.label}
+                        </MenuItem>
+                    ))}
 
-
-        </FormControl>
-    </form>
-  )
+                </Select>
+            </FormControl>
+        </form>
+    )
 }
 
 export default Form
